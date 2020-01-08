@@ -11,6 +11,7 @@ class MentorsApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.orange,
+        accentColor: Color(0xFF313131)
       ),
       home: UpdatesPage(),
     );

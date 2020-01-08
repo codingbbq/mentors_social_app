@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mentors_social_app/models/filter.dart';
 import 'package:mentors_social_app/pages/updates/most_recent.dart';
 import 'package:mentors_social_app/pages/updates/updates_card.dart';
 
@@ -8,55 +9,71 @@ class UpdatesPage extends StatefulWidget {
 }
 
 class _UpdatesPageState extends State<UpdatesPage> {
-
-  String _value;
+  Filter _value;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: Text("Mentors&Me", style: TextStyle(color: Colors.black),),
+        leading: null,
+        automaticallyImplyLeading: false,
+        title: Container(
+          width: 150,
+          margin: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+          child: Image.asset(
+            "assets/images/mentors-app-logo.png",
+            width: 150,
+          ),
+        ),
         actions: <Widget>[
           Container(
-            width: 150,
-            padding: const EdgeInsets.only(left: 10.0),
-            margin: const EdgeInsets.only(left: 10.0, right: 10.0, top: 8.0, bottom: 8.0),
+            width: 130,
+            padding: const EdgeInsets.only(left: 15.0),
+            margin: const EdgeInsets.only(
+                left: 10.0, right: 10.0, top: 8.0, bottom: 8.0),
             decoration: BoxDecoration(
-              border: Border.all(
-                color: Color(0xFFe4e4e4)
-              ),
-              borderRadius: BorderRadius.circular(15.0),
-            ),
+                color: Colors.white,
+                border: Border.all(color: Color(0xFFe4e4e4)),
+                borderRadius: BorderRadius.circular(15.0),
+                boxShadow: <BoxShadow>[
+                  BoxShadow(
+                      blurRadius: 2, spreadRadius: 0.5, color: Colors.grey)
+                ]),
             child: DropdownButton(
               underline: SizedBox(),
               icon: Icon(null),
               elevation: 0,
               value: _value,
-              onChanged: (String value) {
+              onChanged: (Filter newValue) {
                 setState(() {
-                  _value = value;
+                  _value = newValue;
                 });
               },
-              items: <String>["Name", "Comments"].map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
+              items: filters.map<DropdownMenuItem<Filter>>((Filter filter) {
+                return DropdownMenuItem<Filter>(
+                  value: filter,
                   child: Row(
                     children: <Widget>[
-                      Icon(Icons.filter_list, color: Colors.deepOrange,),
+                      filter.icon,
                       SizedBox(width: 10),
-                      Text(value)
+                      Text(
+                        filter.filterName,
+                      )
                     ],
                   ),
                 );
               }).toList(),
               hint: Row(
-                    children: <Widget>[
-                      Icon(Icons.filter_list, color: Colors.deepOrange,),
-                      SizedBox(width: 20),
-                      Text("Filter")
-                    ],
+                children: <Widget>[
+                  Icon(
+                    Icons.filter_list,
+                    color: Colors.deepOrange,
                   ),
+                  SizedBox(width: 20),
+                  Text("Filter")
+                ],
+              ),
             ),
           )
         ],
