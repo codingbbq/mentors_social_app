@@ -14,7 +14,9 @@ class _UpdatesPageState extends State<UpdatesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.white,
         leading: null,
         automaticallyImplyLeading: false,
@@ -31,14 +33,14 @@ class _UpdatesPageState extends State<UpdatesPage> {
             width: 130,
             padding: const EdgeInsets.only(left: 15.0),
             margin: const EdgeInsets.only(
-                left: 10.0, right: 10.0, top: 8.0, bottom: 8.0),
+                left: 10.0, right: 10.0, top: 10.0, bottom: 10.0),
             decoration: BoxDecoration(
                 color: Colors.white,
                 border: Border.all(color: Color(0xFFe4e4e4)),
                 borderRadius: BorderRadius.circular(15.0),
                 boxShadow: <BoxShadow>[
                   BoxShadow(
-                      blurRadius: 2, spreadRadius: 0.5, color: Colors.grey)
+                      blurRadius: 1, spreadRadius: 0, color: Colors.grey)
                 ]),
             child: DropdownButton(
               underline: SizedBox(),
@@ -70,8 +72,8 @@ class _UpdatesPageState extends State<UpdatesPage> {
                     Icons.filter_list,
                     color: Colors.deepOrange,
                   ),
-                  SizedBox(width: 20),
-                  Text("Filter")
+                  SizedBox(width: 6),
+                  Text("FILTER BY", style: TextStyle(fontSize: 13.0),)
                 ],
               ),
             ),
