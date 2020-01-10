@@ -4,7 +4,7 @@ class MostRecent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+      padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 40.0),
       margin: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
       decoration: BoxDecoration(
         color: Color(0xFFf7f7f7),

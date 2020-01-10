@@ -14,10 +14,10 @@ class _UpdatesPageState extends State<UpdatesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFfdfdfd),
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFfdfdfd),
         leading: null,
         automaticallyImplyLeading: false,
         title: Container(
@@ -70,7 +70,7 @@ class _UpdatesPageState extends State<UpdatesPage> {
                 children: <Widget>[
                   Icon(
                     Icons.filter_list,
-                    color: Colors.deepOrange,
+                    color: Colors.orange,
                   ),
                   SizedBox(width: 6),
                   Text("FILTER BY", style: TextStyle(fontSize: 13.0),)
