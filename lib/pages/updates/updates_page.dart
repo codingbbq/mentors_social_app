@@ -81,11 +81,15 @@ class _UpdatesPageState extends State<UpdatesPage> {
         ],
       ),
       body: Container(
-        child: Column(
-          children: <Widget>[
-            MostRecent(),
-            UpdatesCard(),
-          ],
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+           child: Column(
+            children: <Widget>[
+              MostRecent(),
+              UpdatesCard(),
+              UpdatesCard(),
+            ],
+          ),
         ),
       ),
     );
