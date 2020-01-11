@@ -14,7 +14,6 @@ class _UpdatesPageState extends State<UpdatesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFfdfdfd),
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Color(0xFFfdfdfd),
@@ -88,9 +87,35 @@ class _UpdatesPageState extends State<UpdatesPage> {
               MostRecent(),
               UpdatesCard(),
               UpdatesCard(),
+              UpdatesCard(),
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
+        selectedItemColor: Colors.orange,
+        unselectedItemColor: Colors.black,
+        currentIndex: 0,
+        showUnselectedLabels: true,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.rss_feed),
+            title: Text("Updates", style: TextStyle(color: Colors.black, fontSize: 16.0),)
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.group),
+            title: Text("Mentors", style: TextStyle(color: Colors.black, fontSize: 16.0),)
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.message),
+            title: Text("Messages", style: TextStyle(color: Colors.black, fontSize: 16.0),)
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            title: Text("Profile", style: TextStyle(color: Colors.black, fontSize: 16.0),)
+          )
+        ],
       ),
     );
   }

@@ -33,46 +33,41 @@ class UpdatesCard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Stack(
-                      children: <Widget>[
-
+                    Container(
+                      width: 60,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage(
+                            "assets/images/profile/guest1.jpg"
+                          )
+                        )
+                      ),
+                      child: OverflowBox(
+                        minWidth: 14,
+                        minHeight: 14,
+                        alignment: Alignment(1.30, 0.8),
+                        child: // Verified Profile
                         Container(
-                          width: 60,
-                          height: 60,
+                          width: 20,
+                          height: 20,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage(
-                                "assets/images/profile/guest1.jpg"
-                              )
+                            color: Colors.orange,
+                            border: Border.all(
+                              color: Colors.white,
+                              width: 2.0
                             )
                           ),
-                        ),
-                        
-                        // Verified Profile
-                        Positioned(
-                          bottom: 10,
-                          right: -10,
-                          child: Container(
-                            width: 20,
-                            height: 20,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.orange,
-                              border: Border.all(
-                                color: Colors.white,
-                                width: 2.0
-                              )
-                            ),
-                            child: Icon(
-                              Icons.done,
-                              size: 14.0,
-                              color: Colors.white,
-                            ),
+                          child: Icon(
+                            Icons.done,
+                            size: 14.0,
+                            color: Colors.white,
                           ),
-                        )
-                      ],
+                        ),
+                      ),
                     ),
                     Row(
                       children: <Widget>[
