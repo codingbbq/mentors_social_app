@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mentors_social_app/pages/updates/updates_page.dart';
+import 'package:mentors_social_app/pages/mentors.dart';
 
 void main() => runApp(MentorsApp());
 
@@ -13,7 +13,7 @@ class MentorsApp extends StatelessWidget {
         primarySwatch: Colors.orange,
         accentColor: Color(0xFF313131)
       ),
-      home: UpdatesPage(),
+      home: Mentors(),
     );
   }
 }
