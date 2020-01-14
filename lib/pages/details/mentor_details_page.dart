@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mentors_social_app/models/customPopUpMenu.dart';
 import 'package:mentors_social_app/models/mentors.dart';
+import 'package:mentors_social_app/pages/details/mentor_details_about.dart';
 import 'package:mentors_social_app/pages/details/mentor_details_card.dart';
+import 'package:mentors_social_app/pages/details/mentor_details_connect.dart';
 
 class MentorDetails extends StatefulWidget {
 
@@ -57,7 +59,10 @@ class _MentorDetailsState extends State<MentorDetails> {
           child: Column(
             children: <Widget>[
               MentorDetailsCard(details : widget.mentorDetails),
-
+              SizedBox(height: 10.0,),
+              MentorDetailsAbout(about: widget.mentorDetails.about),
+              SizedBox(height: 10.0,),
+              MentorDetailsConnect(connect: widget.mentorDetails.connect),
             ],
           ),
         ),
