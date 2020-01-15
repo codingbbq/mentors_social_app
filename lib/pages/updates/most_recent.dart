@@ -9,6 +9,10 @@ class MostRecent extends StatelessWidget {
       decoration: BoxDecoration(
         color: Color(0xFFf7f7f7),
         borderRadius: BorderRadius.circular(25.0),
+        border: Border.all(
+          color: Color(0xFFE7E7E7),
+          width: 1
+        )
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

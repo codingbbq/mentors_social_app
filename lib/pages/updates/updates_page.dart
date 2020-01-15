@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mentors_social_app/pages/updates/most_recent.dart';
 import 'package:mentors_social_app/pages/updates/updates_card.dart';
+import 'package:mentors_social_app/pages/updates/updates_card_two.dart';
 
 class UpdatesPage extends StatelessWidget {
   @override
@@ -12,7 +13,7 @@ class UpdatesPage extends StatelessWidget {
             children: <Widget>[
               MostRecent(),
               UpdatesCard(),
-              UpdatesCard(),
+              UpdatesCardTwo(),
               UpdatesCard(),
             ],
           ),
