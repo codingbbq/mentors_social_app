@@ -133,15 +133,14 @@ class UpdatesCardTwo extends StatelessWidget {
           ),
           Positioned(
             top: 10.0,
-            left: 50.0,
-            child: Container(
-              height: 100,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-              ),
+            left: MediaQuery.of(context).size.width * 0.10,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8.0),
               child: Image.asset(
                 "assets/images/product.jpg",
                 fit: BoxFit.cover,
+                height: 100,
+                width: MediaQuery.of(context).size.width * 0.80,
               )
             ),
           )
